@@ -2,7 +2,7 @@ package main
 
 import (
 		"log"
-		"grpc-demo/api"
+		"github.com/prazdan79/grpc-demp/api"
 		"golang.org/x/net/context"
 		"google.golang.org/grpc"
 )
