@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-dserver
+  labels:
+    app: grpc-server
+spec:
+  selector:
+    matchLabels:
+      app: grpc-server
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: grpc-server
+    spec:
+      containers:
+        - name: grpc-server
+          image: prazdan79/server:v1
+          ports:
+            - name: grpc-sserver
+              containerPort: 3000

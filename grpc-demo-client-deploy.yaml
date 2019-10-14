@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grpc-dclient
+  labels:
+    app: grpc-client
+spec:
+  selector:
+    matchLabels:
+      app: grpc-client
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: grpc-client
+    spec:
+      containers:
+        - name: grpc-client
+          image: prazdan79/client:v1
+          ports:
+            - name: grpc-sclient
+              containerPort: 3000

@@ -4,14 +4,14 @@ import (
 		"fmt"
 		"log"
 		"net"
-	    "grpc-demo/api"
+	    "github.com/prazdan79/grpc-demp/api"
 	    "google.golang.org/grpc"
 )
 
 
 
 func main () {
-	lis, err :=  net.Listen("tcp", fmt.Sprintf(":%d", 7777))
+	lis, err :=  net.Listen("tcp", fmt.Sprintf(":%d", 3000))
 	if err != nil {
 		log.Fatalf("failed to listern : %v", err)
 	}
